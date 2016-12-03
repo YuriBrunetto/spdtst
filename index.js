@@ -6,20 +6,32 @@ const updateNotifier = require('update-notifier')
 
 // silly usage for tests
 const cli = new meow([
-  'Usage',
-  'Just type anything...',
-  '...and then you can make history...',
-  '...with us!'
+  'Usage'
 ])
 
 // check for updates
 updateNotifier({ pkg: cli.pkg }).notify()
 
-let st = speedTest({ maxTime: 20000 })
+let st = speedTest({ maxTime: 15000 })
 
 st.on('data', data => {
-  console.dir(data)
+  let download = data.speeds.download
+  let upload = data.speeds.upload
+
+  console.log('Download speed: ' + download + 'kB/s')
+  console.log('Upload speed: ' + upload + 'kB/s')
+
+  console.log({data})
 })
+
+st.on('downloadprogress', progress => {
+  console.log('Download progress -> ' + progress + '%')
+})
+
+st.on('uploadprogress', progress => {
+  console.log('Upload progress -> ' + progress + '%')
+})
+
 st.on('error', err => {
   console.error(err)
 })
