@@ -3,11 +3,12 @@
 const meow = require('meow')
 const speedTest = require('speedtest-net')
 
+// silly usage for tests
 const cli = new meow([
   'Usage',
   'Just type anything...',
   '...and then you can make history...',
-  '...whit us!'
+  '...with us!'
 ])
 
 let st = speedTest({ maxTime: 20000 })
