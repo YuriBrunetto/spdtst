@@ -2,6 +2,7 @@
 
 const meow = require('meow')
 const speedTest = require('speedtest-net')
+const updateNotifier = require('update-notifier')
 
 // silly usage for tests
 const cli = new meow([
@@ -10,6 +11,9 @@ const cli = new meow([
   '...and then you can make history...',
   '...with us!'
 ])
+
+// check for updates
+updateNotifier({ pkg: cli.pkg }).notify()
 
 let st = speedTest({ maxTime: 20000 })
 

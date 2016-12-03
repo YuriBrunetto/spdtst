@@ -1,5 +1,5 @@
 {
-  "name": "stest",
+  "name": "spdtst",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,13 @@
   },
   "author": "Yuri Brunetto (https://ybrntt.com.br)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YuriBrunetto/spdtst.git"
+  },
   "dependencies": {
     "meow": "^3.7.0",
-    "speedtest-net": "^1.2.9"
+    "speedtest-net": "^1.2.9",
+    "update-notifier": "^1.0.2"
   }
 }
