@@ -3,14 +3,16 @@
 const meow = require('meow')
 const speedTest = require('speedtest-net')
 const updateNotifier = require('update-notifier')
+const ora = require('ora')
 
 // silly usage for tests
 const cli = new meow([
-  'Usage'
+  'brought to you by @yuribrunetto',
+  ' '
 ])
 
 // check for updates
-updateNotifier({ pkg: cli.pkg })  .notify()
+updateNotifier({ pkg: cli.pkg }).notify()
 
 let st = speedTest({ maxTime: 20000 })
 
