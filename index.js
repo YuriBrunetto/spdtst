@@ -5,7 +5,7 @@ const speedTest = require('speedtest-net')
 const updateNotifier = require('update-notifier')
 const ora = require('ora')
 
-// silly usage for tests
+// silly usage
 const cli = new meow([
   'brought to you by @yuribrunetto',
   ' '
@@ -37,5 +37,6 @@ st.on('uploadspeedprogress', speed => {
 })
 
 st.on('error', err => {
-  console.error(err)
+  if (err.code === 'ENOTFOUND')
+    console.error('Unable to connect to the server. Please, check your internet connection.')
 })
