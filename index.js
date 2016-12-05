@@ -3,7 +3,6 @@
 const meow = require('meow')
 const speedTest = require('speedtest-net')
 const updateNotifier = require('update-notifier')
-const ora = require('ora')
 
 // silly usage
 const cli = new meow([
@@ -25,8 +24,6 @@ st.on('data', data => {
   console.log('Download speed: ' + download + ' kB/s')
   console.log('Upload speed: ' + upload + ' kB/s')
   console.log('Latency: ' + ping + ' ms')
-
-  // console.log({data})
 })
 
 st.on('downloadspeedprogress', speed => {
