@@ -21,4 +21,4 @@ Latency: 73.1 ms
 ```
 
 ## License
-MIT &copy; [Yuri Brunetto](https://ybrnt.com.br)
+MIT &copy; [Yuri Brunetto](https://ybrntt.com.br)
