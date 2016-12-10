@@ -6,6 +6,12 @@
   "bin": {
     "spdtst": "./index.js"
   },
+  "keywords": [
+    "spdtst",
+    "speedtest",
+    "internet",
+    "speed"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
