@@ -1,6 +1,6 @@
 {
   "name": "spdtst",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A minor CLI for internet speed tests",
   "main": "./index.js",
   "bin": {
@@ -12,9 +12,6 @@
     "internet",
     "speed"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Yuri Brunetto (https://ybrntt.com.br)",
   "license": "MIT",
   "repository": {
@@ -25,5 +22,6 @@
     "chalk": "^1.1.3",
     "meow": "^3.7.0",
     "speedtest-net": "^1.2.9"
-  }
+  },
+  "devDependencies": {}
 }
