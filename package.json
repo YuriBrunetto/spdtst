@@ -1,6 +1,6 @@
 {
   "name": "spdtst",
-  "version": "0.0.5",
+  "version": "0.1.5",
   "description": "A minor CLI for internet speed tests",
   "main": "./index.js",
   "bin": {
