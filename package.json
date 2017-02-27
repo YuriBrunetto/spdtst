@@ -1,6 +1,6 @@
 {
   "name": "spdtst",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A minor CLI for internet speed tests",
   "main": "./index.js",
   "bin": {
@@ -21,7 +21,8 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "meow": "^3.7.0",
-    "speedtest-net": "^1.2.9"
+    "speedtest-net": "^1.2.9",
+    "update-notifier": "^2.1.0"
   },
   "devDependencies": {}
 }

@@ -4,6 +4,10 @@
 
 const meow = require('meow')
 const speedTest = require('speedtest-net')
+const updateNotifier = require('update-notifier')
+const pkg = require('./package.json')
+
+updateNotifier({pkg}).notify()
 
 // silly usage
 const cli = new meow([
@@ -11,6 +15,8 @@ const cli = new meow([
   ' '
 ])
 
+
+// st
 let st = speedTest({ maxTime: 20000 })
 
 st.on('data', data => {
