@@ -4,7 +4,8 @@
   "description": "A minor CLI for internet speed tests",
   "main": "./index.js",
   "bin": {
-    "spdtst": "./index.js"
+    "spdtst": "./index.js",
+    "deploy": "git push && npm publish"
   },
   "keywords": [
     "spdtst",
