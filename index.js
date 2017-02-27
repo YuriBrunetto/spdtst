@@ -3,6 +3,7 @@
 'use strict'
 
 const meow = require('meow')
+const chalk = require('chalk')
 const speedTest = require('speedtest-net')
 const updateNotifier = require('update-notifier')
 const pkg = require('./package.json')
@@ -24,20 +25,24 @@ st.on('data', data => {
   let upload = (data.speeds.upload * 125).toFixed(2)
   let ping = data.server.ping
 
-  console.log('\nFinal results:')
-  console.log('Download speed: ' + download + ' kB/s')
-  console.log('Upload speed: ' + upload + ' kB/s')
-  console.log('Latency: ' + ping + ' ms')
+  let msg = chalk.magenta('\n-- Final results --\n')
+  msg += chalk.blue(`Download speed: ${download} kB/s\n`)
+  msg += chalk.blue(`Upload speed: ${upload} kB/s\n`)
+  msg += chalk.blue(`Latency: ${ping}ms`)
+
+  console.log(msg)
 })
 
 st.on('downloadspeedprogress', speed => {
-  console.log('Download: ' + (speed * 125).toFixed(2) + ' kB/s')
+  let msg = chalk.green(`Download: ${(speed * 125).toFixed(2)} kB/s`)
+  console.log(msg)
 })
 st.on('uploadspeedprogress', speed => {
-  console.log('Upload: ' + (speed * 125).toFixed(2) + ' kB/s')
+  let msg = chalk.yellow(`Upload: ${(speed * 125).toFixed(2)} kB/s`)
+  console.log(msg)
 })
 
 st.on('error', err => {
   if (err.code === 'ENOTFOUND')
-    console.error('Unable to connect to the server. Please, check your internet connection.')
+    console.error(chalk.bgRed.white('Unable to connect to the server. Please, check your internet connection.'))
 })
