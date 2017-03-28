@@ -7,7 +7,8 @@
     "spdtst": "./index.js"
   },
   "scripts": {
-    "deploy": "git push && npm publish"
+    "deploy": "git push && npm publish",
+    "test": "eslint index.js"
   },
   "keywords": [
     "spdtst",
@@ -27,5 +28,10 @@
     "speedtest-net": "^1.2.9",
     "update-notifier": "^2.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^3.18.0"
+  },
+  "engines": {
+    "node" : ">=5.0.0"
+  }
 }
