@@ -1,4 +1,5 @@
 # spdtst
+[![Build Status](https://travis-ci.org/YuriBrunetto/spdtst.svg?branch=master)](https://travis-ci.org/YuriBrunetto/spdtst)
 > :rocket: A minor CLI for internet speed tests
 
 > ![spdtst's gif](http://i.imgur.com/CrLf0E6.gif)
