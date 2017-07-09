@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+'use strict'
+
 const meow = require('meow')
 const chalk = require('chalk')
 const speedTest = require('speedtest-net')
