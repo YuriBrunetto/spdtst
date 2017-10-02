@@ -11,11 +11,16 @@ const pkg = require('./package.json')
 updateNotifier({pkg}).notify()
 
 // silly usage
-const cli = new meow([
-  'brought to you by @yuribrunetto',
-  ' '
-])
+const cli = meow(`
+  Brought to you by @yuribrunetto (:)
 
+  COMMANDS (only one)
+    --version: to see spdtst's current version.
+`, {
+  alias: {
+    version: pkg.version
+  }
+})
 
 // st
 let st = speedTest({ maxTime: 20000 })
